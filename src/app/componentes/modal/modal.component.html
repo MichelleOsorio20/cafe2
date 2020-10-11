@@ -1,0 +1,30 @@
+<div class="row justify-content-center">
+<div class="card text-justify" style="width: 35rem;">
+  <div class="jumbotron">
+    <div class="container">
+    <div class="text-center"><h1>Nuevo Producto</h1></div>
+    <form name="formProducto" #formProducto="ngForm" (ngSubmit)="onSaveProducto(formProducto)">
+      <input type="text" name="productoId">
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input type="text" name="name" class="form-control" placeholder="Americano" [(ngModel)]="this.data.selectedProducto.name">
+      </div>
+      <div class="form-group">
+        <label for="price">Precio:</label>
+        <input type="text" name="price" class="form-control" placeholder="$10000" [(ngModel)]="this.data.selectedProducto.price">
+      </div>
+      <div class="form-group">
+        <label for="descripcion" class="col-form-label">Descripción:</label>
+        <textarea class="form-control" name="descripcion" [(ngModel)]="this.data.selectedProducto.descripcion" class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="image">Imagen:</label>
+        <input type="text" name="image" class="form-control" placeholder="Imagen" [(ngModel)]="this.data.selectedProducto.image">
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-warning">Guardar Producto</button>
+    </div>
+    </form>
+  </div>
+</div>
+</div>

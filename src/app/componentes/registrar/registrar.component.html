@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+    <div class="card text-center" style="width: 35rem;">
+        <div class="card-body" style="background-color: #784212">
+            <img src="/assets/img/loginus.png" width="200" height="200" alt="...">
+            <h1 class="card-title" style="font: oblique bold 250% cursive;" style="color: #FFFFFF;">Registrar</h1>
+            <div class="jumbotron">
+                <div class="container">
+                    <form [formGroup]="registrarForm" (ngSubmit)="onRegistrar()">
+                        <div class="form-group">                        
+                            <img src="assets/img/lo.png" style="margin-right: 2mm;" width="25" height="25" alt="">
+                          <label for="exampleInputNombre1">Nombre</label>
+                          <input type="nombre" class="form-control" id="exampleInputNombre1" aria-describedby="nombreHelp" placeholder="Nombre" formControlName="nombre" />
+                        </div>
+                        <div class="form-group">                        
+                            <img src="assets/img/cel.png" style="margin-right: 2mm;" width="25" height="25" alt="">
+                          <label for="exampleInputCelular1">Celular</label>
+                          <input type="celular" class="form-control" id="exampleInputCelular1" aria-describedby="celularHelp" placeholder="Celular" formControlName="celular" />
+                        </div>
+                        <div class="form-group">                        
+                            <img src="assets/img/direccion.png" style="margin-right: 1mm;" width="25" height="25" alt="">
+                          <label for="exampleInputDireccion1">Dirección</label>
+                          <input type="direccion" class="form-control" id="exampleInputDireccion1" aria-describedby="direccionHelp" placeholder="Dirección" formControlName="direccion" />
+                        </div>
+                        <div class="form-group">                        
+                            <img src="assets/img/email.png" style="margin-right: 2mm;" width="25" height="25" alt="">
+                          <label for="exampleInputEmail1">Email</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" formControlName="email" />
+                        </div>
+                        <div class="form-group">
+                            <img src="assets/img/password.png" style="margin-right: 1mm;" width="25" height="25" alt="">
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" formControlName="password" />
+                        </div>
+                        <button type="submit" class="btn btn-light">Registrarse</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

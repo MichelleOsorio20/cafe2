@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+  <title>Caffeetalk</title>
+
+</head>
+<body>  
+    <nav class="navbar navbar-dark" style="background-color: #784212">
+        <a class="navbar-brand" href="#/home">
+            <img src="assets/img/log.jpg" width="50" height="40" alt="" loading="lazy">
+            CaffeeTalk
+        </a>
+        <div class="navbar" *ngIf="user$ | async as user; else login">
+        <a class="nav-item">
+            <a class="navbar-brand">{{ user?.email }}</a>
+        </a>
+        <a class="nav-item" *ngIf="user">
+            <a class="navbar-brand" href="#" (click)="onLogout()">Logout</a>
+        </a>
+        </div>
+        <ng-template #login>
+        <div class="navbar">
+            <a class="navbar-brand" href="#/login">Login</a>
+            <a class="navbar-brand" href="#/registrar">Regístrate</a>
+            <a class="navbar-brand" href="#/contactanos">Contáctanos</a>
+        </div>
+        </ng-template>
+    </nav>
+</body>
+</html>

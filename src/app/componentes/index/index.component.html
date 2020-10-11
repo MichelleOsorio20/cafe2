@@ -1,0 +1,31 @@
+<section id="productos" class="mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let producto of productos">
+                <div class="card_producto">
+                    <div class="card">
+                        <div class="card-body text-justify">
+                            <p>
+                                <img class="img-fluid" src="{{producto.image}}" alt="{{producto.name}}">
+                            </p>
+                            <h4 class="card-title text-center">
+                                {{producto.name}}</h4>
+                            <p class="card-text">
+                                <strong>Descripción: </strong>
+                                {{producto.descripcion}}
+                            </p>
+                            <div class="container-precio">
+                                <strong>Precio: </strong>
+                                <p class="badge badge-warning">
+                                    ${{producto.price}}
+                                </p>
+                            </div>
+                            <a href="#" class="btn btn-block" target="_blank">Agregar</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>    
